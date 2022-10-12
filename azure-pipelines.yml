@@ -13,7 +13,9 @@ stages:
     displayName: 'Build job'
     pool:
       name:'MyAgentPool'
-      
+      demands:
+      - npm
+
     variables:
       wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
       dotnetSdkVersion: '6.x'
@@ -76,7 +78,7 @@ stages:
   jobs:
   - deployment: Deploy
     pool:
-      name:'MyAgentpool1'
+      name:'MyAgentPool'
     environment: dev
     variables:
     - group: Release
