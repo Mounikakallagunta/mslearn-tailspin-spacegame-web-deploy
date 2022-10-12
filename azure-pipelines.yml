@@ -12,7 +12,7 @@ stages:
   - job: 'Build'
     displayName: 'Build job'
     pool:
-      name:'MyAgentpool1'
+      name:'MyAgentPool'
       
     variables:
       wwwrootDir: 'Tailspin.SpaceGame.Web/wwwroot'
